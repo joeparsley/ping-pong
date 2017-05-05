@@ -1,4 +1,15 @@
 //BACK-END-LOGIC:
+//replaces number divisible by 3 and replaces with "ping":
+// var divisibleByThree = function(input) {
+//    result = input.map(input) {
+//     if ((i+1) % 3 === 0 ) {
+//       return "ping";
+//   }
+//     return element;
+//   })
+//   return result;
+// };
+
 
 // Takes user input, turnts it into and Array and displays!
 var countToInput = function(input) {
@@ -12,7 +23,9 @@ var countToInput = function(input) {
 
 
 var pingPong = function(input){
- var output = countToInput(input)
+ var output ;
+ output = countToInput(input);
+
  return output;
 }
 
@@ -23,7 +36,10 @@ $(document).ready(function() {
   $('#user-form').submit(function(event) {
     event.preventDefault();
     var input = parseInt($('#number-input').val());
-    result = pingPong(input);
-    $('#number-output').text(result);
+    var result = pingPong(input);
+
+    result.forEach(function(element) {
+      $('#number-output').append( '<li>' + element + '</li>')
+    })
   });
 });
