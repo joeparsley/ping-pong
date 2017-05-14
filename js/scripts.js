@@ -14,8 +14,6 @@ var pingPong = function(input) {
   }
   return userArray;
 }
-
-
 //FRONT-END-LOGIC:
 $(document).ready(function() {
   $('#user-form').submit(function(event) {
